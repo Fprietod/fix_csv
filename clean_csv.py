@@ -37,3 +37,9 @@ with open('starts_data_encoding.csv', 'r') as infile, open('starts_data_with_quo
     writer = csv.writer(outfile,quoting=csv.QUOTE_ALL,escapechar='|',delimiter ="|")
     writer.writerows(reader)
     
+    
+ #Para el delimitador utilizamos funciones que contiene la librería de csv y este archivo lo haremos en csv
+with open('starts_data_encoding.csv', 'r') as infile, open('starts_data_with_quote.csv', 'w',encoding='utf-8') as outfile:
+    reader = csv.reader(infile)
+    writer = csv.writer(outfile,quoting=csv.QUOTE_ALL,escapechar='|',delimiter ="|")
+    writer.writerows(reader)
