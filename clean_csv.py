@@ -34,5 +34,6 @@ with open('starts_data_encoding.csv', 'rt') as f:
 #Para el delimitador utilizamos funciones que contiene la librería de csv
 with open('starts_data_encoding.csv', 'r') as infile, open('starts_data_with_quote.psv', 'w',encoding='utf-8') as outfile:
     reader = csv.reader(infile)
-    writer = csv.writer(outfile,quoting=csv.QUOTE_ALL,escapechar='|')
+    writer = csv.writer(outfile,quoting=csv.QUOTE_ALL,escapechar='|',delimiter ="|")
     writer.writerows(reader)
+    
