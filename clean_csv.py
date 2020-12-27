@@ -9,6 +9,7 @@ frame_header = ['id', 'hip', 'hr', 'gl', 'lum','var','var_min','var_max']
 
 # Con DictReader nosotros vamos a poder acceder a la cabecera, lo que se hará es recorrer nuestros campos, si hay un dato que falta
 #Insertaremos un dato de la cabecera para que así cada línea contenga el mismo número de columnas y se pueda leer el archivo para este caso 
+#Para este ejercicio utilizaremos 7 columnas para recuperar los datos que podamos, adicionalmente se deben agregar todas.
 with open('starts_data_updated.csv', 'r') as f_input:
     for row in csv.DictReader(f_input, delimiter='|', fieldnames=csv_header[:-1], restkey=csv_header[-1], quotechar='"', doublequote=True, skipinitialspace=True):
         try:
